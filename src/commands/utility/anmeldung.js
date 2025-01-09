@@ -12,7 +12,7 @@ module.exports = {
             option.setName('discord')
                 .setDescription('Dein Discord Benutzername')
                 .setRequired(true)),
-interaction.getUser.id
+
     async execute(interaction) {
         const benutzername = interaction.options.getString('benutzername');
         const discord = interaction.options.getString('discord');
