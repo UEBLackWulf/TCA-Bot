@@ -13,7 +13,7 @@ module.exports = {
 		.addStringOption(option =>
 			option
 				.setName('reason')
-				.setDescription('Der grund für den ban'))
+				.setDescription('Der Grund für den ban'))
                 .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers)
                 .setContexts(InteractionContextType.Guild),
                 async execute(interaction) {

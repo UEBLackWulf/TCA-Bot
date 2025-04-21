@@ -5,6 +5,12 @@ const path = require('node:path');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
+
+client.once('ready', () => {
+    console.log('Ready logged in as '+ client.user.tag);
+    client.user.setActivity('Ich sche gerne meinen Lieblingsstreamer auf Twitch', { type: 'STREAMING' + 'url: https://www.twitch.tv/ueblackwolf'});
+})
+
 client.commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(foldersPath);
